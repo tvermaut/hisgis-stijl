@@ -1,0 +1,31 @@
+---
+---
+
+:root {
+  --ttfont: 0;
+}
+
+// transparantie
+$transparantie: 0.2;
+$groen: #00ff00;
+$donkergroen: #006400;
+$oranje: #ff8c00;
+$zwart: #000000;
+$blauw: #0000ff;
+$magenta: #ff00ff;
+
+@mixin bgkleur($kleur) {
+    background-color: rgba($kleur, $transparantie);
+}
+
+@mixin stdlbl($kleur){
+    @include bgkleur($kleur);
+    font-weight:normal;
+    font-size: small;
+}
+
+.verwijzing{@include stdlbl($blauw);}
+.beroep{@include stdlbl($oranje);}
+.plaats{@include stdlbl($magenta);}
+.jrSr{@include stdlbl($groen);}
+.artikelnr{@include stdlbl($artikelnr);}
